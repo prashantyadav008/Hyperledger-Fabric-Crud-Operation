@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Build output
+build/
+dist/
+
+# Testing files
+coverage/
+*.test.js
+*.spec.js
+jest/
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.development
+.env.test.local
+
+# Cache
+.cache/
+*.lock
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# Static files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+
+# Misc
+.DS_Store
+.pnp/
+.pnp.js
+
+
+package-lock.json
