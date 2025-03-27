@@ -2,6 +2,22 @@
 
 # Run Basic CRUD Setup using Hyperledger Fabric Network
 
+## Write the Chaincode
+
+1.  Navigate to the chaincode/asset folder:
+
+        cd chaincode/asset
+
+2.  Initialize a Go module: Create Init File
+
+        go mod init asset
+
+3.  Create a Go file for your chaincode:
+
+        go get github.com/hyperledger/fabric-contract-api-go/contractapi
+
+        go get github.com/hyperledger/fabric-protos-go
+
 ## Set Up the Fabric Network
 
 1.  Download the Fabric samples and binaries: (This will download `Fabric v2.5.5 and Fabric CA v1.5.2` and this package compatable with `go 1.23.5 version`)
