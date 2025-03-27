@@ -18,7 +18,7 @@ const connectToNetwork = async () => {
 
   const identity = await wallet.get("admin");
   if (!identity) {
-    throw new Error("❌ Admin identity not found in wallet");
+    throw new Error("Admin identity not found in wallet");
   }
 
   const gateway = new Gateway();
@@ -34,58 +34,58 @@ const connectToNetwork = async () => {
   return { gateway, contract };
 };
 
-// ✅ CREATE
+// CREATE
 const createAsset = async (id, color, amount, owner) => {
   const { gateway, contract } = await connectToNetwork();
   try {
     await contract.submitTransaction("CreateAsset", id, color, amount, owner);
-    console.log(`✅ Asset ${id} created`);
+    console.log(`Asset ${id} created`);
   } finally {
     gateway.disconnect();
   }
 };
 
-// ✅ READ
+// READ
 const readAsset = async (id) => {
   const { gateway, contract } = await connectToNetwork();
   try {
     const result = await contract.evaluateTransaction("ReadAsset", id);
-    console.log(`✅ Asset ${id} details:`, result.toString());
+    console.log(`Asset ${id} details:`, result.toString());
     return JSON.parse(result.toString());
   } finally {
     gateway.disconnect();
   }
 };
 
-// ✅ READ
+// READ
 const readAllAsset = async () => {
   const { gateway, contract } = await connectToNetwork();
   try {
     const result = await contract.evaluateTransaction("GetAllAssets");
-    console.log(`✅ All Asset details:`, result.toString());
+    console.log(`All Asset details:`, result.toString());
     return JSON.parse(result.toString());
   } finally {
     gateway.disconnect();
   }
 };
 
-// ✅ UPDATE
+// UPDATE
 const updateAsset = async (id, color, amount, owner) => {
   const { gateway, contract } = await connectToNetwork();
   try {
     await contract.submitTransaction("UpdateAsset", id, color, amount, owner);
-    console.log(`✅ Asset ${id} updated`);
+    console.log(`Asset ${id} updated`);
   } finally {
     gateway.disconnect();
   }
 };
 
-// ✅ DELETE
+// DELETE
 const deleteAsset = async (id) => {
   const { gateway, contract } = await connectToNetwork();
   try {
     await contract.submitTransaction("DeleteAsset", id);
-    console.log(`✅ Asset ${id} deleted`);
+    console.log(`Asset ${id} deleted`);
   } finally {
     gateway.disconnect();
   }

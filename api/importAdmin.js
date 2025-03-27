@@ -12,7 +12,7 @@ const importAdminIdentity = async () => {
     // Check if admin already exists
     const identity = await wallet.get("admin");
     if (identity) {
-      console.log("✅ Admin identity already exists in the wallet");
+      console.log("Admin identity already exists in the wallet");
       return;
     }
 
@@ -47,9 +47,9 @@ const importAdminIdentity = async () => {
     };
 
     await wallet.put("admin", new_identity);
-    console.log("✅ Admin new_identity imported successfully");
+    console.log("Admin new_identity imported successfully");
   } catch (error) {
-    console.error(`❌ Failed to import admin new_identity: ${error}`);
+    console.error(`Failed to import admin new_identity: ${error}`);
     throw new Error(error);
   }
 };
