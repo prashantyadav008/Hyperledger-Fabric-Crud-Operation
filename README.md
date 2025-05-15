@@ -6,7 +6,7 @@ This repository demonstrates CRUD (Create, Read, Update, Delete) operations usin
 
 ## Video Demonstration
 
-[Watch the setup and demonstration video here](https://github.com/prashantyadav008/Hyperledger-Fabric-Crud-Operation/blame/crudOperation/Run-Crud-Operation-using-Fabric-Test_network.mp4)
+[Watch the setup and demonstration video on youtube click here](https://www.youtube.com/watch?v=UIvhN9aTBJ0)
 
 <br><hr><br>
 
